@@ -1,0 +1,17 @@
+{
+  "name": "harsha-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js",
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "matter-js": "^0.20.0",
+    "@fontsource/dm-sans": "^5.2.0",
+    "@fontsource/syne": "^5.2.0",
+    "@fontsource/space-mono": "^5.2.0"
+  }
+}
