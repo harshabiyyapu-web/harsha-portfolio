@@ -158,3 +158,40 @@ if(productVideo){
  document.addEventListener('visibilitychange',()=>{if(document.hidden)productVideo.pause();});
  document.querySelector('#motion-toggle').addEventListener('click',()=>{if(motionOff)productVideo.pause();});
 }
+
+// The live project starts on demand so the rest of the portfolio stays fast.
+const geoHome=document.querySelector('#geo-stage');
+const geoDialog=document.querySelector('#geo-dialog');
+let geoFrame;
+function loadGeo(){
+ if(!geoFrame){
+  geoFrame=document.createElement('iframe');geoFrame.title='GeoPulse interactive website';
+  geoFrame.src='https://geopulse-ai.lovable.app/';geoFrame.referrerPolicy='strict-origin-when-cross-origin';
+  geoFrame.setAttribute('allow','fullscreen');
+  geoFrame.setAttribute('sandbox','allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads');
+  geoHome.replaceChildren(geoFrame);document.querySelector('#geo-reload').hidden=false;
+ }
+ return geoFrame;
+}
+document.querySelector('#geo-launch').addEventListener('click',loadGeo);
+document.querySelector('#geo-expand').addEventListener('click',()=>{document.querySelector('#geo-expanded-stage').append(loadGeo());geoDialog.showModal();document.querySelector('#geo-close').focus();});
+document.querySelector('#geo-close').addEventListener('click',()=>geoDialog.close());
+geoDialog.addEventListener('close',()=>{if(geoFrame)geoHome.append(geoFrame);document.querySelector('#geo-expand').focus();});
+document.querySelector('#geo-reload').addEventListener('click',()=>{if(geoFrame)geoFrame.src='https://geopulse-ai.lovable.app/';});
+
+const galleryPhotos=[['2727','At Mesa School of Business'],['2856','At IIM Bangalore'],['2692','A conversation in progress'],['0426','A moment of recognition'],['0137','Away from the desk'],['0097','A personal portrait'],['0225','Out and about']];
+const photoDialog=document.querySelector('#photo-dialog');let photoIndex=0;
+function displayPhoto(index){photoIndex=(index+galleryPhotos.length)%galleryPhotos.length;const [file,caption]=galleryPhotos[photoIndex];document.querySelector('#photo-full').src=`assets/gallery/${file}.webp`;document.querySelector('#photo-full').alt=caption;document.querySelector('#photo-caption').textContent=caption;document.querySelector('#photo-count').textContent=`${photoIndex+1} / ${galleryPhotos.length}`;}
+document.querySelectorAll('[data-photo]').forEach(b=>b.addEventListener('click',()=>{displayPhoto(Number(b.dataset.photo));photoDialog.showModal();document.querySelector('#photo-close').focus();}));
+document.querySelector('#photo-close').addEventListener('click',()=>photoDialog.close());
+document.querySelector('#photo-next').addEventListener('click',()=>displayPhoto(photoIndex+1));
+document.querySelector('#photo-prev').addEventListener('click',()=>displayPhoto(photoIndex-1));
+photoDialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();displayPhoto(photoIndex+1);}if(e.key==='ArrowLeft'){e.preventDefault();displayPhoto(photoIndex-1);}});
+document.querySelector('#gallery-more').addEventListener('click',e=>{const b=e.currentTarget;const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-photo]').forEach((el,i)=>{if(i>=4)el.hidden=!show;});b.setAttribute('aria-expanded',String(show));b.textContent=show?'Show fewer photos −':'See more photos ＋';});
+
+const portraits=[['0097','Harsha Biyyapu in a white shirt'],['0137','Harsha Biyyapu outdoors'],['2727','Harsha Biyyapu at Mesa School of Business']];let portraitIndex=0,portraitPaused=false,heroVisible=true;
+function setPortrait(i){portraitIndex=i;const im=document.querySelector('.hero-portrait');im.src=`assets/gallery/${portraits[i][0]}-thumb.webp`;im.alt=portraits[i][1];document.querySelectorAll('[data-hero-photo]').forEach((b,k)=>{b.classList.toggle('selected',k===i);b.setAttribute('aria-pressed',String(k===i));});}
+document.querySelectorAll('[data-hero-photo]').forEach(b=>b.addEventListener('click',()=>setPortrait(Number(b.dataset.heroPhoto))));
+document.querySelector('#pause-portraits').addEventListener('click',e=>{portraitPaused=!portraitPaused;e.currentTarget.setAttribute('aria-pressed',String(portraitPaused));e.currentTarget.setAttribute('aria-label',portraitPaused?'Play portrait slideshow':'Pause portrait slideshow');e.currentTarget.textContent=portraitPaused?'▶':'Ⅱ';});
+new IntersectionObserver(entries=>heroVisible=entries[0].isIntersecting).observe(document.querySelector('.hero'));
+setInterval(()=>{if(heroVisible&&!document.hidden&&!motionOff&&!portraitPaused)setPortrait((portraitIndex+1)%portraits.length);},6000);
