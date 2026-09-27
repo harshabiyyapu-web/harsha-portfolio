@@ -189,13 +189,6 @@ document.querySelector('#photo-prev').addEventListener('click',()=>displayPhoto(
 photoDialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();displayPhoto(photoIndex+1);}if(e.key==='ArrowLeft'){e.preventDefault();displayPhoto(photoIndex-1);}});
 document.querySelector('#gallery-more').addEventListener('click',e=>{const b=e.currentTarget;const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-photo]').forEach((el,i)=>{if(i>=6)el.hidden=!show;});b.setAttribute('aria-expanded',String(show));b.textContent=show?'Show fewer photos −':'See all 16 photos ＋';document.querySelector('#gallery-count').textContent=show?'16 / 16 MOMENTS':'06 / 16 MOMENTS';layoutGallery();if(!show)document.querySelector('#gallery').scrollIntoView({block:'start',behavior:motionOff?'instant':'smooth'});});
 
-const portraits=[['photo-01','Harsha Biyyapu in a blazer'],['photo-16','Harsha Biyyapu seated on campus'],['photo-03','Harsha Biyyapu outdoors']];let portraitIndex=0,portraitPaused=false,heroVisible=true;
-function setPortrait(i){portraitIndex=i;const im=document.querySelector('.hero-portrait');im.src=`assets/gallery/${portraits[i][0]}-thumb.webp`;im.alt=portraits[i][1];document.querySelectorAll('[data-hero-photo]').forEach((b,k)=>{b.classList.toggle('selected',k===i);b.setAttribute('aria-pressed',String(k===i));});}
-document.querySelectorAll('[data-hero-photo]').forEach(b=>b.addEventListener('click',()=>setPortrait(Number(b.dataset.heroPhoto))));
-document.querySelector('#pause-portraits').addEventListener('click',e=>{portraitPaused=!portraitPaused;e.currentTarget.setAttribute('aria-pressed',String(portraitPaused));e.currentTarget.setAttribute('aria-label',portraitPaused?'Play portrait slideshow':'Pause portrait slideshow');e.currentTarget.textContent=portraitPaused?'▶':'Ⅱ';});
-new IntersectionObserver(entries=>heroVisible=entries[0].isIntersecting).observe(document.querySelector('.hero'));
-setInterval(()=>{if(heroVisible&&!document.hidden&&!motionOff&&!portraitPaused)setPortrait((portraitIndex+1)%portraits.length);},6000);
-
 // Use each photo's own proportions to build a responsive masonry grid.
 const photoGrid=document.querySelector('.photo-grid');
 function layoutGallery(){
