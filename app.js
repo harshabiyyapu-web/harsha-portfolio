@@ -179,7 +179,7 @@ document.querySelector('#geo-close').addEventListener('click',()=>geoDialog.clos
 geoDialog.addEventListener('close',()=>{if(geoFrame)geoHome.append(geoFrame);document.querySelector('#geo-expand').focus();});
 document.querySelector('#geo-reload').addEventListener('click',()=>{if(geoFrame)geoFrame.src='https://geopulse-ai.lovable.app/';});
 
-const galleryPhotos=[['2727','At Mesa School of Business'],['2856','At IIM Bangalore'],['2692','A conversation in progress'],['0426','A moment of recognition'],['0137','Away from the desk'],['0097','A personal portrait'],['0225','Out and about']];
+const galleryPhotos=[["photo-01", "Harsha Biyyapu"], ["photo-02", "By the sea"], ["photo-11", "GeoPulse at Mesa"], ["photo-16", "Between classes"], ["photo-09", "At my desk"], ["photo-14", "At IIM Bangalore"], ["photo-04", "Build. Break. Learn. Repeat."], ["photo-03", "A quiet afternoon"], ["photo-10", "A conversation in progress"], ["photo-08", "A win to remember"], ["photo-07", "Together, outdoors"], ["photo-15", "Taking the scenic route"], ["photo-12", "Finding my rhythm"], ["photo-13", "School memories"], ["photo-06", "Out in the hills"], ["photo-05", "A moment between plans"]];
 const photoDialog=document.querySelector('#photo-dialog');let photoIndex=0;
 function displayPhoto(index){photoIndex=(index+galleryPhotos.length)%galleryPhotos.length;const [file,caption]=galleryPhotos[photoIndex];document.querySelector('#photo-full').src=`assets/gallery/${file}.webp`;document.querySelector('#photo-full').alt=caption;document.querySelector('#photo-caption').textContent=caption;document.querySelector('#photo-count').textContent=`${photoIndex+1} / ${galleryPhotos.length}`;}
 document.querySelectorAll('[data-photo]').forEach(b=>b.addEventListener('click',()=>{displayPhoto(Number(b.dataset.photo));photoDialog.showModal();document.querySelector('#photo-close').focus();}));
@@ -187,11 +187,20 @@ document.querySelector('#photo-close').addEventListener('click',()=>photoDialog.
 document.querySelector('#photo-next').addEventListener('click',()=>displayPhoto(photoIndex+1));
 document.querySelector('#photo-prev').addEventListener('click',()=>displayPhoto(photoIndex-1));
 photoDialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();displayPhoto(photoIndex+1);}if(e.key==='ArrowLeft'){e.preventDefault();displayPhoto(photoIndex-1);}});
-document.querySelector('#gallery-more').addEventListener('click',e=>{const b=e.currentTarget;const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-photo]').forEach((el,i)=>{if(i>=4)el.hidden=!show;});b.setAttribute('aria-expanded',String(show));b.textContent=show?'Show fewer photos −':'See more photos ＋';});
+document.querySelector('#gallery-more').addEventListener('click',e=>{const b=e.currentTarget;const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-photo]').forEach((el,i)=>{if(i>=6)el.hidden=!show;});b.setAttribute('aria-expanded',String(show));b.textContent=show?'Show fewer photos −':'See all 16 photos ＋';document.querySelector('#gallery-count').textContent=show?'16 / 16 MOMENTS':'06 / 16 MOMENTS';layoutGallery();if(!show)document.querySelector('#gallery').scrollIntoView({block:'start',behavior:motionOff?'instant':'smooth'});});
 
-const portraits=[['0097','Harsha Biyyapu in a white shirt'],['0137','Harsha Biyyapu outdoors'],['2727','Harsha Biyyapu at Mesa School of Business']];let portraitIndex=0,portraitPaused=false,heroVisible=true;
+const portraits=[['photo-01','Harsha Biyyapu in a blazer'],['photo-16','Harsha Biyyapu seated on campus'],['photo-03','Harsha Biyyapu outdoors']];let portraitIndex=0,portraitPaused=false,heroVisible=true;
 function setPortrait(i){portraitIndex=i;const im=document.querySelector('.hero-portrait');im.src=`assets/gallery/${portraits[i][0]}-thumb.webp`;im.alt=portraits[i][1];document.querySelectorAll('[data-hero-photo]').forEach((b,k)=>{b.classList.toggle('selected',k===i);b.setAttribute('aria-pressed',String(k===i));});}
 document.querySelectorAll('[data-hero-photo]').forEach(b=>b.addEventListener('click',()=>setPortrait(Number(b.dataset.heroPhoto))));
 document.querySelector('#pause-portraits').addEventListener('click',e=>{portraitPaused=!portraitPaused;e.currentTarget.setAttribute('aria-pressed',String(portraitPaused));e.currentTarget.setAttribute('aria-label',portraitPaused?'Play portrait slideshow':'Pause portrait slideshow');e.currentTarget.textContent=portraitPaused?'▶':'Ⅱ';});
 new IntersectionObserver(entries=>heroVisible=entries[0].isIntersecting).observe(document.querySelector('.hero'));
 setInterval(()=>{if(heroVisible&&!document.hidden&&!motionOff&&!portraitPaused)setPortrait((portraitIndex+1)%portraits.length);},6000);
+
+// Use each photo's own proportions to build a responsive masonry grid.
+const photoGrid=document.querySelector('.photo-grid');
+function layoutGallery(){
+ const gap=parseFloat(getComputedStyle(photoGrid).rowGap)||16;
+ photoGrid.querySelectorAll('[data-photo]').forEach(card=>{if(card.hidden)return;const img=card.querySelector('img');const height=card.clientWidth*Number(img.getAttribute('height'))/Number(img.getAttribute('width'));card.style.gridRowEnd=`span ${Math.ceil((height+gap)/(4+gap))}`;});
+}
+new ResizeObserver(layoutGallery).observe(photoGrid);
+layoutGallery();
