@@ -42,6 +42,14 @@ if(window.Matter){
     const delta=last?Math.min(time-last,33.334):16.667;last=time;
     // Bounded substeps keep collisions stable on slower frames.
     const count=Math.ceil(delta/16.667);for(let i=0;i<count;i++)Engine.update(engine,delta/count);
+    // Clamp tilt so stacking/collisions never flip a chip past a slight, readable lean.
+    const maxTilt=.3;
+    items.forEach(({body})=>{
+      if(drag&&drag.item.body===body)return;
+      let a=body.angle%(Math.PI*2);if(a>Math.PI)a-=Math.PI*2;else if(a<-Math.PI)a+=Math.PI*2;
+      if(a>maxTilt){Body.setAngle(body,maxTilt);Body.setAngularVelocity(body,0);}
+      else if(a<-maxTilt){Body.setAngle(body,-maxTilt);Body.setAngularVelocity(body,0);}
+    });
     paint();
     if(drag||items.some(i=>!i.body.isSleeping)||pending.length)raf=requestAnimationFrame(tick);else last=0;
   }
@@ -69,14 +77,20 @@ if(window.Matter){
     width=stage.clientWidth;height=stage.clientHeight;
     const sizes=blocks.map(el=>({w:Math.min(el.offsetWidth,width-20),h:el.offsetHeight}));
     stage.classList.add('physics-ready');walls();started=true;
+    // Evenly spaced, shuffled spawn slots keep the drop readable instead of a random pile-up.
+    const n=blocks.length,slot=width/n,order=[...Array(n).keys()];
+    for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}
     blocks.forEach((el,i)=>{
       el.style.visibility='hidden';
       const timer=setTimeout(()=>{
         pending=pending.filter(id=>id!==timer);if(token!==generation)return;
         const {w,h}=sizes[i];el.style.width=`${w}px`;
-        const x=w/2+10+Math.random()*Math.max(0,width-w-20);
-        const body=Bodies.rectangle(x,-h-25,w,h,{chamfer:{radius:Math.min(h/2-1,18)},restitution:.35,friction:.55,frictionAir:.025,density:.002,sleepThreshold:65,angle:(Math.random()-.5)*.4});
-        Body.setAngularVelocity(body,(Math.random()-.5)*.025);Composite.add(engine.world,body);
+        const slotCenter=slot*(order[i]+.5)+(Math.random()-.5)*slot*.3;
+        const x=Math.max(w/2+10,Math.min(width-w/2-10,slotCenter));
+        const body=Bodies.rectangle(x,-h-25,w,h,{chamfer:{radius:Math.min(h/2-1,18)},restitution:.2,friction:.6,frictionAir:.045,density:.002,sleepThreshold:65,angle:(Math.random()-.5)*.12});
+        // Heavier rotational inertia keeps collisions from tipping chips over — a clean fall, not a tumble.
+        Body.setInertia(body,body.inertia*14);
+        Body.setAngularVelocity(body,(Math.random()-.5)*.01);Composite.add(engine.world,body);
         items.push({body,el,w,h});el.style.visibility='visible';paint();wake();
       },i*100);
       pending.push(timer);
@@ -100,7 +114,7 @@ if(window.Matter){
       const dt=Math.max(8,e.timeStamp-drag.t);drag.vx=(e.clientX-drag.x)/dt*16.667;drag.vy=(e.clientY-drag.y)/dt*16.667;drag.x=e.clientX;drag.y=e.clientY;drag.t=e.timeStamp;wake();
     });
     el.addEventListener('pointerup',release);el.addEventListener('pointercancel',release);el.addEventListener('lostpointercapture',release);
-    el.addEventListener('click',e=>{if(e.detail!==0||motionOff)return;const item=items.find(i=>i.el===el);if(item){Sleeping.set(item.body,false);Body.setVelocity(item.body,{x:(Math.random()-.5)*12,y:-13});Body.setAngularVelocity(item.body,(Math.random()-.5)*.14);wake();}});
+    el.addEventListener('click',e=>{if(e.detail!==0||motionOff)return;const item=items.find(i=>i.el===el);if(item){Sleeping.set(item.body,false);Body.setVelocity(item.body,{x:(Math.random()-.5)*12,y:-13});Body.setAngularVelocity(item.body,(Math.random()-.5)*.05);wake();}});
   });
   new IntersectionObserver(entries=>{
     visible=entries[0].isIntersecting;
