@@ -2,6 +2,8 @@
 
 A responsive portfolio with an on-demand GeoPulse live preview, interactive physics skills, photo gallery, certificate viewer, and consent-based Meta Pixel analytics.
 
+The design uses bold condensed type (Anton) with Inter Tight, rounded colour panels on black, outlined pills, sticker illustrations (`assets/stickers/`), and springy motion. `motion.js` drives Lenis smooth scrolling and GSAP (ScrollTrigger, SplitText, Draggable, Inertia) effects; all of it reverts when the footer Motion toggle is off or the visitor prefers reduced motion. Libraries are self-hosted in `assets/vendor/`.
+
 ## Local preview
 
 ```sh

@@ -1,0 +1,2 @@
+GSAP 3.15.0 (gsap, ScrollTrigger, SplitText, Draggable, InertiaPlugin)
+Standard "no charge" license: https://gsap.com/standard-license

@@ -23,25 +23,6 @@ document.querySelectorAll('.certificate').forEach(button => button.addEventListe
 $('#close-dialog').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
 
-// A small custom cursor follows the actual pointer, with no trailing animation loop.
-const cursor = $('#cursor');
-if (matchMedia('(pointer: fine)').matches) {
-  document.body.classList.add('custom-cursor');
-  document.addEventListener('pointermove', e => {
-    if(motionOff)return;
-    cursor.style.transform = `translate3d(${e.clientX + 3}px,${e.clientY + 4}px,0) translate(-50%,-50%)`;
-    cursor.style.opacity='1';
-  }, {passive:true});
-  document.addEventListener('pointerover', e => cursor.classList.toggle('over', Boolean(e.target.closest('a,button,summary'))));
-  document.addEventListener('pointerdown', ()=>cursor.classList.add('dragging'));
-  document.addEventListener('pointerup', ()=>cursor.classList.remove('dragging'));
-  document.documentElement.addEventListener('pointerleave', ()=>cursor.style.opacity='0');
-}
-const reveal = new IntersectionObserver(entries => entries.forEach(entry => {
-  if(entry.isIntersecting){entry.target.classList.add('shown');reveal.unobserve(entry.target);}
-}), {threshold:0.06});
-document.querySelectorAll('.section-heading,.project,.about-layout,.stats,.milestone,.education,.events,.certificate,.venture-band').forEach(el=>{el.classList.add('reveal');reveal.observe(el);});
-
 // DOM-rendered rigid bodies keep text crisp and accessible, without a canvas or scroll hijacking.
 const stage = $('#playground');
 const blocks = [...document.querySelectorAll('.skill-block')];
@@ -137,9 +118,10 @@ if(window.Matter){
 function setMotion(off){
   motionOff=off;document.body.classList.toggle('motion-off',off);
   $('#motion-toggle').setAttribute('aria-pressed',String(off));
-  $('#motion-toggle').innerHTML=`Motion ${off?'off':'on'} <span>${off?'○':'◉'}</span>`;
+  $('#motion-toggle').textContent=`Motion ${off?'off':'on'} ${off?'○':'◉'}`;
   reset.disabled=off;reset.title=off?'Enable motion in the footer to play':'';
   if(physics)physics.drop();
+  if(window.siteMotion)off?window.siteMotion.disable():window.siteMotion.enable();
 }
 $('#motion-toggle').addEventListener('click',()=>setMotion(!motionOff));
 reducedQuery.addEventListener('change',e=>setMotion(e.matches));
