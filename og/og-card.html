@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(../assets/anton-400.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:500;src:url(../assets/inter-tight-500.woff2) format("woff2")}
+@font-face{font-family:"Inter Tight";font-weight:700;src:url(../assets/inter-tight-700.woff2) format("woff2")}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden;background:#000}
+.card{position:absolute;inset:14px;border-radius:40px;background:#efe8ff;overflow:hidden;border:2px solid #000}
+svg.tube{position:absolute;inset:0;width:100%;height:100%}
+.copy{position:absolute;left:64px;top:62px;width:640px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:11px 18px;background:#fff;border:2px solid #000;border-radius:99px;font:700 15px/1 "Inter Tight";letter-spacing:.08em}
+.eyebrow i{width:12px;height:12px;border-radius:50%;background:#c6ff3d;border:2px solid #000}
+h1{margin-top:26px;font:400 136px/.84 Anton;text-transform:uppercase;letter-spacing:.002em;color:#000}
+h1 span{display:block}
+.tag{margin-top:26px;font:500 38px/1.05 "Inter Tight";letter-spacing:-.03em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{padding:12px 18px;border:2px solid #000;border-radius:99px;font:700 17px/1 "Inter Tight";letter-spacing:.03em;box-shadow:3px 4px 0 #000}
+.photo{position:absolute;right:62px;top:70px;width:330px;height:430px;border-radius:30px;border:3px solid #000;overflow:hidden;rotate:3deg;box-shadow:12px 14px 0 #000;background:#ddd}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.url{position:absolute;right:66px;bottom:44px;padding:12px 20px;background:#000;color:#fff;border-radius:99px;font:700 18px/1 "Inter Tight";letter-spacing:.06em}
+.st{position:absolute;filter:drop-shadow(4px 6px 0 rgba(0,0,0,.9))}
+</style></head><body>
+<div class="card">
+ <svg class="tube" viewBox="0 0 1172 602" preserveAspectRatio="none"><path d="M-80 520C120 640 300 180 520 280S860 640 1000 380 880 -40 1260 40" fill="none" stroke="#6d3cff" stroke-width="110" stroke-linecap="round" opacity=".9"/><path d="M-80 520C120 640 300 180 520 280S860 640 1000 380 880 -40 1260 40" fill="none" stroke="#9b7bff" stroke-width="54" stroke-linecap="round" transform="translate(-8 -16)"/><path d="M-80 520C120 640 300 180 520 280S860 640 1000 380 880 -40 1260 40" fill="none" stroke="#e6dcff" stroke-width="14" stroke-linecap="round" transform="translate(-14 -28)"/></svg>
+ <div class="copy">
+  <span class="eyebrow"><i></i>IIM BANGALORE DBE · MESA SCHOOL OF BUSINESS</span>
+  <h1><span>Harsha</span><span>Biyyapu</span></h1>
+  <p class="tag">I build online stores, AI tools<br>and the systems behind them.</p>
+  <div class="chips"><span class="chip" style="background:#c6ff3d">₹20L → ₹2Cr · Varam</span><span class="chip" style="background:#3dd6ff">PlanDBE · 650+ students</span></div>
+ </div>
+ <div class="photo"><img src="../assets/gallery/photo-01.webp" alt=""></div>
+ <img class="st" src="../assets/stickers/rocket.svg" style="width:110px;right:352px;top:36px;rotate:-12deg" alt="">
+ <img class="st" src="../assets/stickers/smiley.svg" style="width:92px;right:36px;top:430px;rotate:10deg" alt="">
+ <span class="url">HARSHABIYYAPU.ONE</span>
+</div>
+</body></html>

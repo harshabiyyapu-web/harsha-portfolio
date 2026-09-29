@@ -28,12 +28,14 @@
   gsap.registerPlugin(ScrollTrigger, ...[window.SplitText, window.Draggable, window.InertiaPlugin].filter(Boolean));
 
   let lenis = null, ctx = null, raf = null, active = false;
+  // Phones and touch screens get native scrolling and no scroll-scrubbed effects; those are what made mobile janky.
+  const lite = matchMedia('(max-width: 760px), (pointer: coarse)').matches;
 
   function init() {
     if (active) return;
     active = true;
 
-    if (window.Lenis) {
+    if (window.Lenis && !lite) {
       lenis = new Lenis({ lerp: 0.1, anchors: true, autoRaf: false });
       lenis.on('scroll', ScrollTrigger.update);
       raf = time => lenis.raf(time * 1000);
@@ -48,24 +50,28 @@
       // Hero intro
       const word = document.querySelector('.hero-word');
       const chars = window.SplitText ? SplitText.create(word, { type: 'chars', charsClass: 'char' }).chars : [word];
-      gsap.timeline({ defaults: { ease: 'expo.out' } })
-        .from('.hero .tube', { strokeDashoffset: 1, duration: 2.4, ease: 'power3.inOut', stagger: 0.06 }, 0)
-        .from('.eyebrow-pill', { y: 24, autoAlpha: 0, duration: 0.9 }, 0.25)
-        .from(chars, { yPercent: 120, rotate: () => gsap.utils.random(-14, 14), autoAlpha: 0, duration: 1.3, stagger: 0.055, ease: 'back.out(1.7)' }, 0.3)
-        .from('.hero-tagline', { y: 40, autoAlpha: 0, duration: 1.1 }, 0.75)
-        .from('.hero-actions .pill', { y: 30, autoAlpha: 0, stagger: 0.08, duration: 1 }, 0.9)
-        .from('.hero .sticker', { scale: 0, rotate: -60, duration: 1.6, stagger: 0.09, ease: 'elastic.out(1, 0.5)' }, 0.8);
+      // Short and snappy: the loader already did the waiting, so the hero lands in about a second.
+      const intro = gsap.timeline({ paused: true, defaults: { ease: 'expo.out' } })
+        .from('.hero .tube', { strokeDashoffset: 1, duration: 1.6, ease: 'power3.inOut', stagger: 0.05 }, 0)
+        .from('.eyebrow-pill', { y: 24, autoAlpha: 0, duration: 0.7 }, 0.05)
+        .from(chars, { yPercent: 120, rotate: () => gsap.utils.random(-14, 14), autoAlpha: 0, duration: 1, stagger: 0.04, ease: 'back.out(1.7)' }, 0.05)
+        .from('.hero-tagline', { y: 30, autoAlpha: 0, duration: 0.8 }, 0.35)
+        .from('.hero-actions .pill', { y: 24, autoAlpha: 0, stagger: 0.06, duration: 0.8 }, 0.45)
+        .from('.hero .sticker', { scale: 0, rotate: -60, duration: 1.3, stagger: 0.07, ease: 'elastic.out(1, 0.5)' }, 0.4);
+      (window.pageReady || Promise.resolve()).then(() => intro.play());
 
-      // Hero parallax on scroll
-      const heroScrub = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
-      gsap.to('.hero-tube', { scale: 1.3, rotate: -7, yPercent: 10, ease: 'none', scrollTrigger: heroScrub });
-      gsap.to('.hero-inner', { yPercent: 28, autoAlpha: 0.15, ease: 'none', scrollTrigger: { ...heroScrub } });
+      if (!lite) {
+        // Hero parallax on scroll
+        const heroScrub = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+        gsap.to('.hero-tube', { scale: 1.3, rotate: -7, yPercent: 10, ease: 'none', scrollTrigger: heroScrub });
+        gsap.to('.hero-inner', { yPercent: 28, autoAlpha: 0.15, ease: 'none', scrollTrigger: { ...heroScrub } });
 
-      // Stickers drift at different speeds, and lean toward the pointer.
-      document.querySelectorAll('.sticker').forEach(sticker => {
-        const depth = Number(sticker.dataset.depth || 1);
-        gsap.to(sticker, { y: -140 * depth, ease: 'none', scrollTrigger: { trigger: sticker.closest('section'), start: 'top bottom', end: 'bottom top', scrub: true } });
-      });
+        // Stickers drift at different speeds.
+        document.querySelectorAll('.sticker').forEach(sticker => {
+          const depth = Number(sticker.dataset.depth || 1);
+          gsap.to(sticker, { y: -140 * depth, ease: 'none', scrollTrigger: { trigger: sticker.closest('section'), start: 'top bottom', end: 'bottom top', scrub: true } });
+        });
+      }
       if (matchMedia('(pointer: fine)').matches) {
         const movers = [...document.querySelectorAll('.sticker')].map(el => ({
           depth: Number(el.dataset.depth || 1),
@@ -94,15 +100,15 @@
       gsap.from('.statement .sticker', { scale: 0, rotate: 50, duration: 1.5, stagger: 0.1, ease: 'elastic.out(1, 0.5)', scrollTrigger: { trigger: '.statement', start: 'top 60%', once: true } });
 
       // Panels lift into place as they arrive.
-      document.querySelectorAll('.panel:not(.hero)').forEach(panel => {
+      if (!lite) document.querySelectorAll('.panel:not(.hero)').forEach(panel => {
         gsap.from(panel, { scale: 0.94, transformOrigin: '50% 0%', ease: 'none', scrollTrigger: { trigger: panel, start: 'top bottom', end: 'top 45%', scrub: true } });
       });
 
       // Cards and blocks spring in as a batch.
       const pop = '.row, .geopulse-feature, .stat, .milestone, .academic-card, .school-history article, .event-card, .certificate, .social-card, .experience, .venture-band';
-      gsap.set(pop, { y: 90, rotate: 2.5, autoAlpha: 0 });
+      gsap.set(pop, lite ? { y: 40, autoAlpha: 0 } : { y: 90, rotate: 2.5, autoAlpha: 0 });
       ScrollTrigger.batch(pop, {
-        start: 'top 92%', once: true,
+        start: lite ? 'top 98%' : 'top 92%', once: true,
         onEnter: batch => gsap.to(batch, { y: 0, rotate: 0, autoAlpha: 1, duration: 1.3, stagger: 0.09, ease: 'elastic.out(1, 0.75)', overwrite: true, clearProps: 'all' })
       });
 

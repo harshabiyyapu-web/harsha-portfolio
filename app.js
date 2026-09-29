@@ -77,15 +77,16 @@ if(window.Matter){
     width=stage.clientWidth;height=stage.clientHeight;
     const sizes=blocks.map(el=>({w:Math.min(el.offsetWidth,width-20),h:el.offsetHeight}));
     stage.classList.add('physics-ready');walls();started=true;
-    // Evenly spaced, shuffled spawn slots keep the drop readable instead of a random pile-up.
-    const n=blocks.length,slot=width/n,order=[...Array(n).keys()];
+    // Fewer horizontal slots than chips forces some overlap, so the pile stacks up
+    // dense and full instead of spreading thin across the whole width.
+    const n=blocks.length,slotsCount=Math.max(3,Math.round(n*.62)),slot=width/slotsCount,order=[...Array(n).keys()];
     for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}
     blocks.forEach((el,i)=>{
       el.style.visibility='hidden';
       const timer=setTimeout(()=>{
         pending=pending.filter(id=>id!==timer);if(token!==generation)return;
         const {w,h}=sizes[i];el.style.width=`${w}px`;
-        const slotCenter=slot*(order[i]+.5)+(Math.random()-.5)*slot*.3;
+        const slotCenter=slot*((order[i]%slotsCount)+.5)+(Math.random()-.5)*slot*.4;
         const x=Math.max(w/2+10,Math.min(width-w/2-10,slotCenter));
         const body=Bodies.rectangle(x,-h-25,w,h,{chamfer:{radius:Math.min(h/2-1,18)},restitution:.2,friction:.6,frictionAir:.045,density:.002,sleepThreshold:65,angle:(Math.random()-.5)*.12});
         // Heavier rotational inertia keeps collisions from tipping chips over — a clean fall, not a tumble.
