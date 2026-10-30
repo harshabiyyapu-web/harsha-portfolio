@@ -133,7 +133,7 @@ if(window.Matter){
 function setMotion(off){
   motionOff=off;document.body.classList.toggle('motion-off',off);
   $('#motion-toggle').setAttribute('aria-pressed',String(off));
-  $('#motion-toggle').textContent=`Motion ${off?'off':'on'} ${off?'○':'◉'}`;
+  $('#motion-toggle').textContent=`Motion ${off?'off':'on'}`;
   reset.disabled=off;reset.title=off?'Enable motion in the footer to play':'';
   if(physics)physics.drop();
   if(window.siteMotion)off?window.siteMotion.disable():window.siteMotion.enable();
@@ -178,13 +178,13 @@ document.querySelector('#geo-reload').addEventListener('click',()=>{if(geoFrame)
 
 const galleryPhotos=[["photo-01", "Harsha Biyyapu"], ["photo-02", "By the sea"], ["photo-11", "GeoPulse at Mesa"], ["photo-16", "Between classes"], ["photo-09", "At my desk"], ["photo-14", "At IIM Bangalore"], ["photo-04", "Build. Break. Learn. Repeat."], ["photo-03", "A quiet afternoon"], ["photo-10", "A conversation in progress"], ["photo-08", "A win to remember"], ["photo-07", "Together, outdoors"], ["photo-15", "Taking the scenic route"], ["photo-12", "Finding my rhythm"], ["photo-13", "School memories"], ["photo-06", "Out in the hills"], ["photo-05", "A moment between plans"]];
 const photoDialog=document.querySelector('#photo-dialog');let photoIndex=0;
-function displayPhoto(index){photoIndex=(index+galleryPhotos.length)%galleryPhotos.length;const [file,caption]=galleryPhotos[photoIndex];document.querySelector('#photo-full').src=`assets/gallery/${file}.webp`;document.querySelector('#photo-full').alt=caption;document.querySelector('#photo-caption').textContent=caption;document.querySelector('#photo-count').textContent=`${photoIndex+1} / ${galleryPhotos.length}`;}
+function displayPhoto(index){photoIndex=(index+galleryPhotos.length)%galleryPhotos.length;const [file,caption]=galleryPhotos[photoIndex];document.querySelector('#photo-full').src=`assets/gallery/${file}.webp`;document.querySelector('#photo-full').alt=caption;document.querySelector('#photo-caption').textContent=caption;document.querySelector('#photo-count').textContent=`${photoIndex+1} of ${galleryPhotos.length}`;}
 document.querySelectorAll('[data-photo]').forEach(b=>b.addEventListener('click',()=>{displayPhoto(Number(b.dataset.photo));photoDialog.showModal();document.querySelector('#photo-close').focus();}));
 document.querySelector('#photo-close').addEventListener('click',()=>photoDialog.close());
 document.querySelector('#photo-next').addEventListener('click',()=>displayPhoto(photoIndex+1));
 document.querySelector('#photo-prev').addEventListener('click',()=>displayPhoto(photoIndex-1));
 photoDialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();displayPhoto(photoIndex+1);}if(e.key==='ArrowLeft'){e.preventDefault();displayPhoto(photoIndex-1);}});
-document.querySelector('#gallery-more').addEventListener('click',e=>{const b=e.currentTarget;const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-photo]').forEach((el,i)=>{if(i>=6)el.hidden=!show;});b.setAttribute('aria-expanded',String(show));b.textContent=show?'Show fewer photos −':'See all 16 photos ＋';document.querySelector('#gallery-count').textContent=show?'16 / 16 MOMENTS':'06 / 16 MOMENTS';layoutGallery();if(!show)document.querySelector('#gallery').scrollIntoView({block:'start',behavior:motionOff?'instant':'smooth'});});
+document.querySelector('#gallery-more').addEventListener('click',e=>{const b=e.currentTarget;const show=b.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-photo]').forEach((el,i)=>{if(i>=6)el.hidden=!show;});b.setAttribute('aria-expanded',String(show));b.textContent=show?'Show fewer photos':'See all 16 photos';document.querySelector('#gallery-count').textContent=show?'16 of 16 photos':'6 of 16 photos';layoutGallery();if(!show)document.querySelector('#gallery').scrollIntoView({block:'start',behavior:motionOff?'instant':'smooth'});});
 
 // Use each photo's own proportions to build a responsive masonry grid.
 const photoGrid=document.querySelector('.photo-grid');

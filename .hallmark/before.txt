@@ -1,0 +1,392 @@
+FAIL 2a style.css:178 purple-to-pink gradient on .progress span | fix: One anchor hue; drop the gradient
+FAIL 7a style.css:49 pure #000: color: #000 (::selection) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:50 pure #fff: background: #fff (.skip) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:69 pure #fff: color: #fff (.c-purple) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:111 pure #fff: background: #fff (.logo-btn) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:117 pure #fff: background: #fff (.menu-toggle) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:118 pure #000: background: #000 (.menu-toggle span::before,.menu-toggle span::after) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:148 pure #fff: background: #fff (.eyebrow-pill) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:150 pure #000: color: #000 (.hero-word) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:179 pure #000: color: #000 (.cursor) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:191 pure #fff: color: #fff (.st-photo) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:210 pure #000: color: #000 (.fcard.c-orange,.fcard.c-blue) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:214 pure #fff: color: #fff (.geopulse-feature) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:220 pure #fff: background: #fff (.geo-window) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:220 pure #000: color: #000 (.geo-window) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:236 pure #000: background: #000 (.row-art video) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:237 pure #fff: background: #fff (.browser-frame,.chat-screenshot) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:243 pure #fff: background: #fff (.mini-badge) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:261 pure #fff: background: #fff (.about-photo figcaption) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:274 pure #fff: background: #fff (.playground) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:294 pure #fff: background: #fff (.experience) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:297 pure #fff: background: #fff (.company-logo) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:302 pure #fff: background: #fff (.expand-icon) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:311 pure #fff: color: #fff (.venture-number strong) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:328 pure #fff: background: #fff (.academic-card) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:336 pure #fff: background: #fff (.school-history article) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:343 pure #fff: background: #fff (.event-card) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:356 pure #fff: background: #fff (.gallery-photo>span) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:372 pure #fff: background: #fff (.certificate-image) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:382 pure #fff: color: #fff (.contact) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:383 pure #000: color: #000 (.contact .social-card) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:391 pure #fff: background: #fff (.social-icon) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:399 pure #fff: color: #fff (.contact-email:hover) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:402 pure #fff: color: #fff (.footer) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:403 pure #fff: color: #fff (.footer-word) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:408 pure #fff: background: #fff (dialog) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:408 pure #000: color: #000 (dialog) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:424 pure #000: background: #000 (#photo-dialog) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:424 pure #fff: color: #fff (#photo-dialog) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:424 pure #fff: border-color: #fff (#photo-dialog) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:428 pure #fff: background: #fff (.photo-view button) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:428 pure #000: color: #000 (.photo-view button) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:434 pure #fff: color: #fff (.is-loading .loader,.is-loaded .loader) | fix: Tint the base toward the anchor hue
+FAIL 7a style.css:460 pure #fff: background: #fff (.stat-icon) | fix: Tint the base toward the anchor hue
+FAIL 10a style.css:108 transitioning top on .header | fix: Animate transform or opacity instead
+FAIL 10a style.css:179 transitioning width on .cursor | fix: Animate transform or opacity instead
+FAIL 19 index.html:5 dash "—" in copy | fix: A comma, a colon, a full stop or parentheses; never a dash
+FAIL 26a index.html:1 [1440px] focus ring 1.44:1 against what is behind it on a.pill "View selected work" | fix: A ring at 3:1 or better against the surface it is drawn over: --color-focus, or a ring colour per band
+FAIL 26a index.html:1 [1440px] focus ring 1.44:1 against what is behind it on a.pill "Connect with me ↗C" | fix: A ring at 3:1 or better against the surface it is drawn over: --color-focus, or a ring colour per band
+FAIL 26a index.html:1 [1440px] focus ring 1.44:1 against what is behind it on a.hero-scroll "SCROLL ↓" | fix: A ring at 3:1 or better against the surface it is drawn over: --color-focus, or a ring colour per band
+FAIL 26a index.html:1 [1440px] focus ring 1.44:1 against what is behind it on a.st-photo "MEET ME ↓" | fix: A ring at 3:1 or better against the surface it is drawn over: --color-focus, or a ring colour per band
+FAIL 26a index.html:1 [1440px] focus ring 1.71:1 against what is behind it on a.pill "See the work ↗See " | fix: A ring at 3:1 or better against the surface it is drawn over: --color-focus, or a ring colour per band
+FAIL 26a index.html:1 [1440px] focus ring 1.71:1 against what is behind it on a.pill "Experience ↗Experi" | fix: A ring at 3:1 or better against the surface it is drawn over: --color-focus, or a ring colour per band
+FAIL 30a index.html:49 emoji icon "✳" in <b class=""> | fix: One icon library or custom SVG
+FAIL 34 style.css:125 width: min(440px,calc(100vw - 2*va… on .mobile-nav (scrollbar overflow) | fix: width: 100% with container padding
+FAIL 34 style.css:435 overflow-x: hidden on .is-loading body (breaks sticky) | fix: Use overflow-x: clip on both html and body, never hidden
+FAIL 40 index.html:1 [1280px] contrast 4.20:1 against the pixels behind < 4.5:1 on video "Your browser does not su" | fix: Raise the contrast to threshold
+FAIL 40 index.html:1 [1280px] contrast 1.24:1 against the pixels behind < 3:1 on p.display "GO ON. MAKE A MESS." | fix: Raise the contrast to threshold
+FAIL 40 index.html:1 [1280px] contrast 2.86:1 against the pixels behind < 3:1 on strong.display "3–5M" | fix: Raise the contrast to threshold
+FAIL 47a index.html:136 re-drawn chrome class "browser-bar" (class="browser-bar") | fix: Use a real screenshot in a figure
+FAIL 47a style.css:240 re-drawn chrome selector .browser-bar | fix: Use a real screenshot in a figure
+FAIL 48 style.css:49 colour literal #000 outside tokens (color on ::selection) | fix: Lift the value into the token block
+FAIL 48 style.css:50 colour literal #fff outside tokens (background on .skip) | fix: Lift the value into the token block
+FAIL 48 style.css:50 colour literal #000 outside tokens (border on .skip) | fix: Lift the value into the token block
+FAIL 48 style.css:60 colour literal rgba(255,255,255,.72) outside tokens (color on .kicker.light) | fix: Lift the value into the token block
+FAIL 48 style.css:69 colour literal #fff outside tokens (color on .c-purple) | fix: Lift the value into the token block
+FAIL 48 style.css:93 colour literal #000 outside tokens (border on .dot) | fix: Lift the value into the token block
+FAIL 48 style.css:95 colour literal #000 outside tokens (border on .live-dot) | fix: Lift the value into the token block
+FAIL 48 style.css:95 colour literal rgba(198,255,61,.7) outside tokens (box-shadow on .live-dot) | fix: Lift the value into the token block
+FAIL 48 style.css:102 colour literal #000 outside tokens (border-bottom on .announce) | fix: Lift the value into the token block
+FAIL 48 style.css:111 colour literal #fff outside tokens (background on .logo-btn) | fix: Lift the value into the token block
+FAIL 48 style.css:111 colour literal #000 outside tokens (border on .logo-btn) | fix: Lift the value into the token block
+FAIL 48 style.css:117 colour literal #fff outside tokens (background on .menu-toggle) | fix: Lift the value into the token block
+FAIL 48 style.css:117 colour literal #000 outside tokens (border on .menu-toggle) | fix: Lift the value into the token block
+FAIL 48 style.css:118 colour literal #000 outside tokens (background on .menu-toggle span::before,.me…) | fix: Lift the value into the token block
+FAIL 48 style.css:125 colour literal #000 outside tokens (border on .mobile-nav) | fix: Lift the value into the token block
+FAIL 48 style.css:142 colour literal #2a0f8a outside tokens (stroke on .tube-shadow) | fix: Lift the value into the token block
+FAIL 48 style.css:143 colour literal #4a1fd6 outside tokens (stroke on .t1) | fix: Lift the value into the token block
+FAIL 48 style.css:144 colour literal #6d3cff outside tokens (stroke on .t2) | fix: Lift the value into the token block
+FAIL 48 style.css:145 colour literal #9b7bff outside tokens (stroke on .t3) | fix: Lift the value into the token block
+FAIL 48 style.css:146 colour literal #e6dcff outside tokens (stroke on .t4) | fix: Lift the value into the token block
+FAIL 48 style.css:148 colour literal #fff outside tokens (background on .eyebrow-pill) | fix: Lift the value into the token block
+FAIL 48 style.css:148 colour literal #000 outside tokens (border on .eyebrow-pill) | fix: Lift the value into the token block
+FAIL 48 style.css:150 colour literal #000 outside tokens (color on .hero-word) | fix: Lift the value into the token block
+FAIL 48 style.css:161 colour literal rgba(0,0,0,.9) outside tokens (filter on .sticker img,.fcard-sticker,.…) | fix: Lift the value into the token block
+FAIL 48 style.css:169 colour literal rgba(0,0,0,.9) outside tokens (filter on .topping img) | fix: Lift the value into the token block
+FAIL 48 style.css:179 colour literal #000 outside tokens (border on .cursor) | fix: Lift the value into the token block
+FAIL 48 style.css:179 colour literal #000 outside tokens (color on .cursor) | fix: Lift the value into the token block
+FAIL 48 style.css:181 colour literal rgba(198,255,61,.55) outside tokens (background on .cursor.is-link) | fix: Lift the value into the token block
+FAIL 48 style.css:184 colour literal #000 outside tokens (border on .burst) | fix: Lift the value into the token block
+FAIL 48 style.css:191 colour literal #000 outside tokens (border on .st-photo) | fix: Lift the value into the token block
+FAIL 48 style.css:191 colour literal #fff outside tokens (color on .st-photo) | fix: Lift the value into the token block
+FAIL 48 style.css:192 colour literal #000 outside tokens (border on .st-photo img) | fix: Lift the value into the token block
+FAIL 48 style.css:195 colour literal #1a1a1a outside tokens (color on .statement-copy) | fix: Lift the value into the token block
+FAIL 48 style.css:204 colour literal #000 outside tokens (border on .fcard) | fix: Lift the value into the token block
+FAIL 48 style.css:210 colour literal #000 outside tokens (color on .fcard.c-orange,.fcard.c-blue) | fix: Lift the value into the token block
+FAIL 48 style.css:214 colour literal #fff outside tokens (color on .geopulse-feature) | fix: Lift the value into the token block
+FAIL 48 style.css:214 colour literal #000 outside tokens (border on .geopulse-feature) | fix: Lift the value into the token block
+FAIL 48 style.css:217 colour literal #000 outside tokens (border on .geo-dot) | fix: Lift the value into the token block
+FAIL 48 style.css:219 colour literal rgba(255,255,255,.6) outside tokens (border-color on .geopulse-copy .tags span) | fix: Lift the value into the token block
+FAIL 48 style.css:220 colour literal #fff outside tokens (background on .geo-window) | fix: Lift the value into the token block
+FAIL 48 style.css:220 colour literal #000 outside tokens (border on .geo-window) | fix: Lift the value into the token block
+FAIL 48 style.css:220 colour literal #000 outside tokens (color on .geo-window) | fix: Lift the value into the token block
+FAIL 48 style.css:221 colour literal #000 outside tokens (border-bottom on .geo-toolbar) | fix: Lift the value into the token block
+FAIL 48 style.css:230 colour literal rgba(255,255,255,.72) outside tokens (color on .geo-hint) | fix: Lift the value into the token block
+FAIL 48 style.css:235 colour literal #000 outside tokens (border on .row-art) | fix: Lift the value into the token block
+FAIL 48 style.css:236 colour literal #000 outside tokens (border on .row-art video) | fix: Lift the value into the token block
+FAIL 48 style.css:236 colour literal #000 outside tokens (background on .row-art video) | fix: Lift the value into the token block
+FAIL 48 style.css:237 colour literal #fff outside tokens (background on .browser-frame,.chat-screensh…) | fix: Lift the value into the token block
+FAIL 48 style.css:237 colour literal #000 outside tokens (border on .browser-frame,.chat-screensh…) | fix: Lift the value into the token block
+FAIL 48 style.css:237 colour literal #000 outside tokens (box-shadow on .browser-frame,.chat-screensh…) | fix: Lift the value into the token block
+FAIL 48 style.css:240 colour literal #000 outside tokens (border-bottom on .browser-bar) | fix: Lift the value into the token block
+FAIL 48 style.css:241 colour literal #000 outside tokens (border on .result-sticker) | fix: Lift the value into the token block
+FAIL 48 style.css:241 colour literal #000 outside tokens (box-shadow on .result-sticker) | fix: Lift the value into the token block
+FAIL 48 style.css:243 colour literal #fff outside tokens (background on .mini-badge) | fix: Lift the value into the token block
+FAIL 48 style.css:243 colour literal #000 outside tokens (border on .mini-badge) | fix: Lift the value into the token block
+FAIL 48 style.css:250 colour literal #000 outside tokens (border-top on .row-info details) | fix: Lift the value into the token block
+FAIL 48 style.css:259 colour literal #000 outside tokens (border on .about-photo) | fix: Lift the value into the token block
+FAIL 48 style.css:259 colour literal #000 outside tokens (box-shadow on .about-photo) | fix: Lift the value into the token block
+FAIL 48 style.css:261 colour literal #fff outside tokens (background on .about-photo figcaption) | fix: Lift the value into the token block
+FAIL 48 style.css:261 colour literal #000 outside tokens (border on .about-photo figcaption) | fix: Lift the value into the token block
+FAIL 48 style.css:266 colour literal #000 outside tokens (border on .stat) | fix: Lift the value into the token block
+FAIL 48 style.css:274 colour literal #000 outside tokens (border on .playground) | fix: Lift the value into the token block
+FAIL 48 style.css:274 colour literal #fff outside tokens (background on .playground) | fix: Lift the value into the token block
+FAIL 48 style.css:277 colour literal #e7e7e7 outside tokens (color on .playground-message p) | fix: Lift the value into the token block
+FAIL 48 style.css:281 colour literal #000 outside tokens (border on .skill-block) | fix: Lift the value into the token block
+FAIL 48 style.css:281 colour literal #000 outside tokens (box-shadow on .skill-block) | fix: Lift the value into the token block
+FAIL 48 style.css:294 colour literal #000 outside tokens (border on .experience) | fix: Lift the value into the token block
+FAIL 48 style.css:294 colour literal #fff outside tokens (background on .experience) | fix: Lift the value into the token block
+FAIL 48 style.css:297 colour literal #000 outside tokens (border on .company-logo) | fix: Lift the value into the token block
+FAIL 48 style.css:297 colour literal #fff outside tokens (background on .company-logo) | fix: Lift the value into the token block
+FAIL 48 style.css:302 colour literal #000 outside tokens (border on .expand-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:302 colour literal #fff outside tokens (background on .expand-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:307 colour literal #000 outside tokens (border on .venture-band) | fix: Lift the value into the token block
+FAIL 48 style.css:311 colour literal #fff outside tokens (color on .venture-number strong) | fix: Lift the value into the token block
+FAIL 48 style.css:311 colour literal #000 outside tokens (-webkit-text-stroke on .venture-number strong) | fix: Lift the value into the token block
+FAIL 48 style.css:318 colour literal #000 outside tokens (border on .milestone) | fix: Lift the value into the token block
+FAIL 48 style.css:324 colour literal #000 outside tokens (border-bottom on .subsection-heading) | fix: Lift the value into the token block
+FAIL 48 style.css:328 colour literal #fff outside tokens (background on .academic-card) | fix: Lift the value into the token block
+FAIL 48 style.css:328 colour literal #000 outside tokens (border on .academic-card) | fix: Lift the value into the token block
+FAIL 48 style.css:334 colour literal #000 outside tokens (border-top on .academic-footer) | fix: Lift the value into the token block
+FAIL 48 style.css:336 colour literal #fff outside tokens (background on .school-history article) | fix: Lift the value into the token block
+FAIL 48 style.css:336 colour literal #000 outside tokens (border on .school-history article) | fix: Lift the value into the token block
+FAIL 48 style.css:337 colour literal #000 outside tokens (border on .school-history img) | fix: Lift the value into the token block
+FAIL 48 style.css:343 colour literal #fff outside tokens (background on .event-card) | fix: Lift the value into the token block
+FAIL 48 style.css:343 colour literal #000 outside tokens (border on .event-card) | fix: Lift the value into the token block
+FAIL 48 style.css:345 colour literal #000 outside tokens (border on .event-card img) | fix: Lift the value into the token block
+FAIL 48 style.css:353 colour literal #000 outside tokens (border on .gallery-photo) | fix: Lift the value into the token block
+FAIL 48 style.css:356 colour literal #fff outside tokens (background on .gallery-photo>span) | fix: Lift the value into the token block
+FAIL 48 style.css:356 colour literal #000 outside tokens (border on .gallery-photo>span) | fix: Lift the value into the token block
+FAIL 48 style.css:370 colour literal #000 outside tokens (border on .certificate) | fix: Lift the value into the token block
+FAIL 48 style.css:372 colour literal #000 outside tokens (border on .certificate-image) | fix: Lift the value into the token block
+FAIL 48 style.css:372 colour literal #fff outside tokens (background on .certificate-image) | fix: Lift the value into the token block
+FAIL 48 style.css:379 colour literal #222 outside tokens (color on .certificate-info small) | fix: Lift the value into the token block
+FAIL 48 style.css:382 colour literal #fff outside tokens (color on .contact) | fix: Lift the value into the token block
+FAIL 48 style.css:383 colour literal #000 outside tokens (color on .contact .social-card) | fix: Lift the value into the token block
+FAIL 48 style.css:384 colour literal #f1ecff outside tokens (color on .contact .contact-sub) | fix: Lift the value into the token block
+FAIL 48 style.css:388 colour literal #000 outside tokens (border on .social-card) | fix: Lift the value into the token block
+FAIL 48 style.css:388 colour literal #000 outside tokens (box-shadow on .social-card) | fix: Lift the value into the token block
+FAIL 48 style.css:389 colour literal #000 outside tokens (box-shadow on .social-card:hover) | fix: Lift the value into the token block
+FAIL 48 style.css:390 colour literal #000 outside tokens (box-shadow on .social-card:active) | fix: Lift the value into the token block
+FAIL 48 style.css:391 colour literal #fff outside tokens (background on .social-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:391 colour literal #000 outside tokens (border on .social-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:398 colour literal #000 outside tokens (-webkit-text-stroke on .contact-email) | fix: Lift the value into the token block
+FAIL 48 style.css:399 colour literal #fff outside tokens (color on .contact-email:hover) | fix: Lift the value into the token block
+FAIL 48 style.css:402 colour literal #fff outside tokens (color on .footer) | fix: Lift the value into the token block
+FAIL 48 style.css:403 colour literal #fff outside tokens (color on .footer-word) | fix: Lift the value into the token block
+FAIL 48 style.css:408 colour literal #000 outside tokens (border on dialog) | fix: Lift the value into the token block
+FAIL 48 style.css:408 colour literal #fff outside tokens (background on dialog) | fix: Lift the value into the token block
+FAIL 48 style.css:408 colour literal #000 outside tokens (color on dialog) | fix: Lift the value into the token block
+FAIL 48 style.css:409 colour literal rgba(0,0,0,.7) outside tokens (background on dialog::backdrop) | fix: Lift the value into the token block
+FAIL 48 style.css:412 colour literal #000 outside tokens (border-bottom on .dialog-heading) | fix: Lift the value into the token block
+FAIL 48 style.css:416 colour literal #000 outside tokens (border on .dialog-body img) | fix: Lift the value into the token block
+FAIL 48 style.css:420 colour literal #000 outside tokens (border-bottom on .geo-modal-bar,.photo-modal-b…) | fix: Lift the value into the token block
+FAIL 48 style.css:424 colour literal #000 outside tokens (background on #photo-dialog) | fix: Lift the value into the token block
+FAIL 48 style.css:424 colour literal #fff outside tokens (color on #photo-dialog) | fix: Lift the value into the token block
+FAIL 48 style.css:424 colour literal #fff outside tokens (border-color on #photo-dialog) | fix: Lift the value into the token block
+FAIL 48 style.css:425 colour literal #333 outside tokens (border-color on .photo-modal-bar) | fix: Lift the value into the token block
+FAIL 48 style.css:428 colour literal #fff outside tokens (background on .photo-view button) | fix: Lift the value into the token block
+FAIL 48 style.css:428 colour literal #000 outside tokens (color on .photo-view button) | fix: Lift the value into the token block
+FAIL 48 style.css:428 colour literal #000 outside tokens (border on .photo-view button) | fix: Lift the value into the token block
+FAIL 48 style.css:434 colour literal #fff outside tokens (color on .is-loading .loader,.is-loade…) | fix: Lift the value into the token block
+FAIL 48 style.css:440 colour literal rgba(255,255,255,.25) outside tokens (filter on .loader-stickers img) | fix: Lift the value into the token block
+FAIL 48 style.css:453 colour literal #fff outside tokens (border on .loader-bar) | fix: Lift the value into the token block
+FAIL 48 style.css:456 colour literal rgba(255,255,255,.6) outside tokens (color on .loader-note) | fix: Lift the value into the token block
+FAIL 48 style.css:460 colour literal #fff outside tokens (background on .stat-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:460 colour literal #000 outside tokens (border on .stat-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:460 colour literal #000 outside tokens (box-shadow on .stat-icon) | fix: Lift the value into the token block
+FAIL 48 style.css:462 colour literal #000 outside tokens (stroke on .stat-icon svg) | fix: Lift the value into the token block
+FAIL 48 style.css:465 colour literal #000 outside tokens (border on .experience-body li::before) | fix: Lift the value into the token block
+FAIL 48 style.css:474 colour literal #000 outside tokens (border on .built-card) | fix: Lift the value into the token block
+FAIL 48 style.css:478 colour literal #000 outside tokens (box-shadow on a.built-card:hover) | fix: Lift the value into the token block
+FAIL 48 style.css:487 colour literal rgba(255,255,255,.9) outside tokens (background on .header::before) | fix: Lift the value into the token block
+FAIL 48 style.css:487 colour literal #000 outside tokens (border on .header::before) | fix: Lift the value into the token block
+FAIL 48 style.css:487 colour literal #000 outside tokens (box-shadow on .header::before) | fix: Lift the value into the token block
+FAIL 48 style.css:489 colour literal rgba(255,255,255,.72) outside tokens (background on .header::before) | fix: Lift the value into the token block
+FAIL 50 style.css:233 bare 1.1fr track holds images (.row) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:258 bare 1.05fr track holds images (.about-layout) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:296 bare 1fr track holds images (.experience summary) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:317 bare 1fr track holds images (.milestones) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:327 bare 1fr track holds images (.academic-grid) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:335 bare 1fr track holds images (.school-history) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:342 bare 1fr track holds images (.event-grid) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:343 bare 1fr track holds images (.event-card) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:352 bare 1fr track holds images (.photo-grid) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:364 bare .9fr track holds images (.certs-layout) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:369 bare 1fr track holds images (.certificate-grid) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:426 bare 1fr track holds images (.photo-view) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:498 bare 1fr track holds images (.geopulse-copy,.row,.about-layout,.certs-layout) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:505 bare 1fr track holds images (.photo-grid) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:522 bare 1fr track holds images (.milestones,.academic-grid,.school-history,.event-grid,.certificate-grid,.social-grid) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 50 style.css:523 bare 1fr track holds images (.experience summary) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 54 index.html:77 eyebrow "HARSHA BIYYAPU · AI BUILDER · D…" before <h1> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:119 eyebrow "01 / SELECTED WORK" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:155 eyebrow "04 — CUSTOMER EXPERIENCE · AT V…" before <h3> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:172 eyebrow "02 / THE PERSON" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:185 eyebrow "03 / A HANDS-ON TOOLKIT" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:192 eyebrow "04 / IN THE REAL WORLD" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:204 eyebrow "05 / STILL LEARNING. STILL BUIL…" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:217 eyebrow "COMPETITIONS & EVENTS" before <div> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:227 eyebrow "BEYOND THE WORK" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:232 eyebrow "06 / ALONG THE WAY" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 54 index.html:247 eyebrow "CONNECT" before <h2> | fix: Cut it; the heading already says this (craft.md § 7 has twelve other openings)
+FAIL 55a style.css:54 uppercase + line-height 0.88 on .display (cap collision) | fix: Line-height 1.0 minimum for caps heads that can wrap
+FAIL 58 index.html:1 [1440px] 194 words on one screen (from y=7250) | fix: One idea per screen: cut to about 80 words, make the section an object
+FAIL 63 index.html:44 middle-dot meta string "Web · AI · E-commerce" | fix: Line breaks, columns or hairlines; one dot in a byline at most
+FAIL 63 index.html:77 middle-dot meta string "HARSHA BIYYAPU · AI BUILDER · DIGITAL GROWTH" | fix: Line breaks, columns or hairlines; one dot in a byline at most
+FAIL 63 index.html:172 middle-dot meta string "ENTREPRENEUR · BUILDER · STUDENT" | fix: Line breaks, columns or hairlines; one dot in a byline at most
+FAIL 63 index.html:173 middle-dot meta string "IIM Bangalore DBE · Year 2 Mesa School of Busines…" | fix: Line breaks, columns or hairlines; one dot in a byline at most
+FAIL 63 index.html:186 middle-dot meta string "DRAG · DROP · REPEAT" | fix: Line breaks, columns or hairlines; one dot in a byline at most
+FAIL 63 index.html:265 arrow glued to the label "→" | fix: A verb as the label; the link already says it goes somewhere
+FAIL 67 index.html:49 "650+ STUDENTS USE PLANDBE" typed in capitals tracked 0.1em (<span>) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:77 "HARSHA BIYYAPU · AI BUILDER · D…" typed in capitals tracked 0.08em (<p class="eyebrow-pill">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:78 "HARSHA" typed in capitals tracked 0.1em (<span class="hero-word">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:89 "SCROLL ↓" typed in capitals tracked 0.14em (<a class="hero-scroll">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:95 "ALL THINGS DIGITAL" typed in capitals tracked 0.1em (<span class="st-line">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:95 "DIGITAL" typed in capitals tracked 0.1em (<span class="slant">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:114 "← DRAG TO EXPLORE →" typed in capitals tracked 0.16em (<p class="rail-hint">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:119 "01 / SELECTED WORK" typed in capitals tracked 0.08em (<p class="kicker">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:123 "FEATURED PROJECT · SEPTEMBER 20…" typed in capitals tracked 0.08em (<p class="kicker light">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:136 "₹40L A MONTH, UP FROM ₹20L" typed in capitals tracked 0.1em (<span class="result-sticker">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:143 "ARCHIVED PROJECT" typed in capitals tracked 0.1em (<span class="mini-badge">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:161 "650+ STUDENTS USE IT" typed in capitals tracked 0.1em (<span class="pill static sm dark">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:172 "ENTREPRENEUR · BUILDER · STUDENT" typed in capitals tracked 0.08em (<figcaption>) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:186 "DRAG · DROP · REPEAT" typed in capitals tracked 0.14em (<div class="playground-label">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:187 "LEARNING BY DOING. ALWAYS. KEYB…" typed in capitals tracked 0.14em (<div class="playground-bottom">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:194 "MAY 2023 — SEP 2026" typed in capitals tracked 0.1em (<span class="experience-date">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:206 "PRIZE · CLAUDE MAX" typed in capitals tracked 0.1em (<span class="pill static dark">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:218 "MESA SCHOOL OF BUSINESS" typed in capitals tracked 0.1em (<time>) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:218 "2ND PLACE · ₹15,000" typed in capitals tracked 0.1em (<span class="pill static sm c-yellow">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 index.html:247 "CONNECT" typed in capitals tracked 0.08em (<p class="kicker center">) | fix: Sentence case in the body face; capitals survive only as a wordmark or as the display voice
+FAIL 67 style.css:58 .kicker: uppercase tracked 0.08em in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:72 .pill: uppercase tracked 0.06em in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:127 .mobile-nav a: uppercase in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:148 .eyebrow-pill: letter-spaced tracked 0.08em in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:154 .hero-scroll: letter-spaced tracked 0.14em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:179 .cursor: letter-spaced tracked 0.08em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:211 .rail-hint: letter-spaced tracked 0.16em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:243 .mini-badge: letter-spaced tracked 0.08em in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:251 .row-info details summary: uppercase tracked 0.06em in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:261 .about-photo figcaption: letter-spaced tracked 0.08em in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:278 .playground-label: letter-spaced tracked 0.14em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:290 .playground-bottom: letter-spaced tracked 0.14em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:404 .footer-bar: letter-spaced tracked 0.12em at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 67 style.css:456 .loader-note: uppercase tracked 0.2em at 11px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+FAIL 73 index.html:1 [1440px] text painted under another element: div.skill-blocks over "DRAG · DROP · RE"; div.skill-blocks over "DRAG · DR… | fix: Give the text its own space, or put it above what covers it on a surface of its own
+FAIL 76 index.html:263 an <img> with no source | fix: Give it the real image, make it a data-slot placeholder, or remove it
+REFLEX 7b style.css:38 pure #000: background: var(--black) (html) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:43 pure #000: background: var(--black) (body) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:43 pure #000: color: var(--black) (body) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:69 pure #fff: background: var(--white) (.c-white) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:133 pure #fff: background: var(--white) (.panel) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:281 pure #fff: background: var(--white) (.skill-block) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:289 pure #fff: background: var(--white) (.skill-block:nth-child(6n+6)) | fix: Tint the base toward the anchor hue
+REFLEX 7b style.css:434 pure #000: background: var(--black) (.is-loading .loader,.is-loaded .loader) | fix: Tint the base toward the anchor hue
+REFLEX 24b style.css:50 padding: 10px 16px (off the 4px scale) on .skip | fix: Use the 4px spacing scale
+REFLEX 24b style.css:108 padding: 0 calc(var(--gutter) + clam… (off the 4px scale) on .header | fix: Use the 4px spacing scale
+REFLEX 24b style.css:114 gap: 6px (off the 4px scale) on .nav-pills | fix: Use the 4px spacing scale
+REFLEX 24b style.css:125 padding: 90px 22px 22px (off the 4px scale) on .mobile-nav | fix: Use the 4px spacing scale
+REFLEX 24b style.css:139 padding-top: clamp(110px,10vw,150px) (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b style.css:139 padding-bottom: clamp(70px,7vw,110px) (off the 4px scale) on .hero | fix: Use the 4px spacing scale
+REFLEX 24b style.css:148 margin-bottom: clamp(14px,1.6vw,26px) (off the 4px scale) on .eyebrow-pill | fix: Use the 4px spacing scale
+REFLEX 24b style.css:152 margin-top: clamp(14px,1.8vw,30px) (off the 4px scale) on .hero-tagline | fix: Use the 4px spacing scale
+REFLEX 24b style.css:153 gap: 10px (off the 4px scale) on .hero-actions | fix: Use the 4px spacing scale
+REFLEX 24b style.css:153 margin-top: clamp(22px,2.6vw,42px) (off the 4px scale) on .hero-actions | fix: Use the 4px spacing scale
+REFLEX 24b style.css:179 margin: -9px 0 0 -9px (off the 4px scale) on .cursor | fix: Use the 4px spacing scale
+REFLEX 24b style.css:181 margin: -22px 0 0 -22px (off the 4px scale) on .cursor.is-link | fix: Use the 4px spacing scale
+REFLEX 24b style.css:182 margin: -37px 0 0 -37px (off the 4px scale) on .cursor.has-label | fix: Use the 4px spacing scale
+REFLEX 24b style.css:188 padding-top: clamp(100px,12vw,210px) (off the 4px scale) on .statement | fix: Use the 4px spacing scale
+REFLEX 24b style.css:188 padding-bottom: clamp(90px,10vw,180px) (off the 4px scale) on .statement | fix: Use the 4px spacing scale
+REFLEX 24b style.css:195 margin: clamp(34px,4vw,64px) auto 0 (off the 4px scale) on .statement-copy | fix: Use the 4px spacing scale
+REFLEX 24b style.css:204 padding: clamp(22px,2vw,34px) (off the 4px scale) on .fcard | fix: Use the 4px spacing scale
+REFLEX 24b style.css:211 margin-top: 26px (off the 4px scale) on .rail-hint | fix: Use the 4px spacing scale
+REFLEX 24b style.css:214 padding: clamp(22px,3vw,48px) (off the 4px scale) on .geopulse-feature | fix: Use the 4px spacing scale
+REFLEX 24b style.css:221 padding: 10px 12px 10px 18px (off the 4px scale) on .geo-toolbar | fix: Use the 4px spacing scale
+REFLEX 24b style.css:223 gap: 6px (off the 4px scale) on .geo-toolbar>div | fix: Use the 4px spacing scale
+REFLEX 24b style.css:232 gap: clamp(70px,8vw,140px) (off the 4px scale) on .rows | fix: Use the 4px spacing scale
+REFLEX 24b style.css:233 gap: clamp(30px,5vw,96px) (off the 4px scale) on .row | fix: Use the 4px spacing scale
+REFLEX 24b style.css:258 gap: clamp(30px,6vw,110px) (off the 4px scale) on .about-layout | fix: Use the 4px spacing scale
+REFLEX 24b style.css:259 margin-top: clamp(30px,3vw,50px) (off the 4px scale) on .about-photo | fix: Use the 4px spacing scale
+REFLEX 24b style.css:265 gap: clamp(10px,1vw,16px) (off the 4px scale) on .stats | fix: Use the 4px spacing scale
+REFLEX 24b style.css:273 gap: 14px (off the 4px scale) on .skills-instructions | fix: Use the 4px spacing scale
+REFLEX 24b style.css:279 padding: 50px 18px (off the 4px scale) on .skill-blocks | fix: Use the 4px spacing scale
+REFLEX 24b style.css:293 gap: 10px (off the 4px scale) on .experience-list | fix: Use the 4px spacing scale
+REFLEX 24b style.css:296 padding: clamp(16px,1.6vw,24px) clam… (off the 4px scale) on .experience summary | fix: Use the 4px spacing scale
+REFLEX 24b style.css:304 padding: 0 clamp(18px,2vw,30px) clam… (off the 4px scale) on .experience-body | fix: Use the 4px spacing scale
+REFLEX 24b style.css:307 margin-top: clamp(40px,4vw,70px) (off the 4px scale) on .venture-band | fix: Use the 4px spacing scale
+REFLEX 24b style.css:307 padding: clamp(26px,3.4vw,56px) (off the 4px scale) on .venture-band | fix: Use the 4px spacing scale
+REFLEX 24b style.css:317 gap: clamp(10px,1vw,16px) (off the 4px scale) on .milestones | fix: Use the 4px spacing scale
+REFLEX 24b style.css:323 margin-top: clamp(60px,6vw,110px) (off the 4px scale) on .education | fix: Use the 4px spacing scale
+REFLEX 24b style.css:324 padding-bottom: 14px (off the 4px scale) on .subsection-heading | fix: Use the 4px spacing scale
+REFLEX 24b style.css:327 gap: clamp(10px,1vw,16px) (off the 4px scale) on .academic-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:328 padding: clamp(22px,2.2vw,36px) (off the 4px scale) on .academic-card | fix: Use the 4px spacing scale
+REFLEX 24b style.css:335 gap: clamp(10px,1vw,16px) (off the 4px scale) on .school-history | fix: Use the 4px spacing scale
+REFLEX 24b style.css:335 margin-top: clamp(10px,1vw,16px) (off the 4px scale) on .school-history | fix: Use the 4px spacing scale
+REFLEX 24b style.css:336 gap: 14px (off the 4px scale) on .school-history article | fix: Use the 4px spacing scale
+REFLEX 24b style.css:336 padding: 10px 22px 10px 10px (off the 4px scale) on .school-history article | fix: Use the 4px spacing scale
+REFLEX 24b style.css:341 margin-top: clamp(60px,6vw,110px) (off the 4px scale) on .events | fix: Use the 4px spacing scale
+REFLEX 24b style.css:342 gap: clamp(10px,1vw,16px) (off the 4px scale) on .event-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:343 gap: 10px 16px (off the 4px scale) on .event-card | fix: Use the 4px spacing scale
+REFLEX 24b style.css:343 padding: clamp(20px,2vw,30px) (off the 4px scale) on .event-card | fix: Use the 4px spacing scale
+REFLEX 24b style.css:349 margin-top: 6px (off the 4px scale) on .event-card .pill | fix: Use the 4px spacing scale
+REFLEX 24b style.css:352 gap: 0 clamp(10px,1vw,16px) (off the 4px scale) on .photo-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:352 row-gap: clamp(10px,1vw,16px) (off the 4px scale) on .photo-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:364 gap: clamp(30px,5vw,90px) (off the 4px scale) on .certs-layout | fix: Use the 4px spacing scale
+REFLEX 24b style.css:369 gap: clamp(10px,1vw,16px) (off the 4px scale) on .certificate-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:375 padding: 6px 8px 10px (off the 4px scale) on .certificate-info | fix: Use the 4px spacing scale
+REFLEX 24b style.css:387 gap: clamp(10px,1vw,16px) (off the 4px scale) on .social-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:388 gap: 14px (off the 4px scale) on .social-card | fix: Use the 4px spacing scale
+REFLEX 24b style.css:388 padding: 10px 20px 10px 10px (off the 4px scale) on .social-card | fix: Use the 4px spacing scale
+REFLEX 24b style.css:405 gap: 6px (off the 4px scale) on .footer-bar>div | fix: Use the 4px spacing scale
+REFLEX 24b style.css:417 padding: 14px 24px (off the 4px scale) on .dialog-footer | fix: Use the 4px spacing scale
+REFLEX 24b style.css:420 gap: 10px (off the 4px scale) on .geo-modal-bar,.photo-modal-bar | fix: Use the 4px spacing scale
+REFLEX 24b style.css:426 gap: 10px (off the 4px scale) on .photo-view | fix: Use the 4px spacing scale
+REFLEX 24b style.css:426 padding: 14px (off the 4px scale) on .photo-view | fix: Use the 4px spacing scale
+REFLEX 24b style.css:430 padding: 0 20px 18px (off the 4px scale) on #photo-caption | fix: Use the 4px spacing scale
+REFLEX 24b style.css:437 gap: 18px (off the 4px scale) on .loader-stage | fix: Use the 4px spacing scale
+REFLEX 24b style.css:439 gap: 10px (off the 4px scale) on .loader-stickers | fix: Use the 4px spacing scale
+REFLEX 24b style.css:459 gap: 14px (off the 4px scale) on .stat | fix: Use the 4px spacing scale
+REFLEX 24b style.css:472 margin-top: clamp(70px,8vw,140px) (off the 4px scale) on .more-built | fix: Use the 4px spacing scale
+REFLEX 24b style.css:473 gap: clamp(10px,1vw,16px) (off the 4px scale) on .built-grid | fix: Use the 4px spacing scale
+REFLEX 24b style.css:482 gap: 10px (off the 4px scale) on .resume-actions | fix: Use the 4px spacing scale
+REFLEX 24b style.css:484 margin-right: 6px (off the 4px scale) on .nav-resume | fix: Use the 4px spacing scale
+REFLEX 24b style.css:509 padding: 0 calc(var(--gutter) + 10px) (off the 4px scale) on .header | fix: Use the 4px spacing scale
+REFLEX 24b style.css:526 padding-left: clamp(18px,2vw,30px) (off the 4px scale) on .experience-body | fix: Use the 4px spacing scale
+REFLEX 24b style.css:534 padding: 8px 10px (off the 4px scale) on .geo-toolbar | fix: Use the 4px spacing scale
+REFLEX 39b index.html:1 [1440px] control height outside 44 to 52px: button.pill 24px, button.pill 24px, button 674px | fix: Marketing controls stand 44 to 52px; app UI 32 to 40px with a 44px hit target
+REFLEX 44c index.html:1 [1440px] hero ends at 646px of a 900px screen | fix: Fill the first screen with the visual or the headline, not with copy
+REFLEX 47b index.html:136 re-drawn chrome class "browser-frame" (class="browser-frame") | fix: Use a real screenshot in a figure
+REFLEX 47b style.css:237 re-drawn chrome selector .browser-frame,.chat-screenshot | fix: Use a real screenshot in a figure
+REFLEX 49b index.html:1 [320px] link "HARSHABIYYAPU@GMAIL.COM" wraps to 2 lines (a.contact-email.display) | fix: Shorten the label or set nowrap
+REFLEX 71 index.html:1 [1440px] heads nearer what precedes them than what they head: h3.display "VARAM LATEX" 12px over, 27px under; h3.displa… | fix: At least twice the space above a head as below it
+REFLEX 72 index.html:1 [1440px] text crowds the edge of its box: a.pill bottom -7px; a.pill bottom -3px; a.pill bottom -3px | fix: Pad the box: max(8px, 0.5em) at the sides, max(4px, 0.3em) above and below
+REFLEX 75 index.html:1 [1440px] text that strains the eye: span at 10.5px, span at 10.5px, span at 10.5px, span at 10.5px | fix: Running text 12px or more (16px for body), functional text 11px or more, multi-line prose leaded 1.3 or more
+REFLEX 79 index.html:1 [1440px] 254px of nothing between the hero's last content (y 646) and the fold | fix: Centre the content in the screen and grow the visual or the head (layout.md § 6); never fill it with copy
+REFLEX 80 index.html:1 [1440px] drawn illustration: section.panel (1585x947, 5 shapes) | fix: A photograph (theme.mjs photos), the product built, or type at scale; SVG is for icons, logos and labelled charts or diagrams (imagery.md § 7)
+WARN 3 style.css:481 side stripe border-left: 4px solid var(--purple) on .school-note | fix: Hairline all round, none, or an accent square
+WARN 11 style.css:113 hover scale(1.08) on 2 selectors | fix: One hover signal per element
+WARN 11 style.css:194 hover scale(1.05) on 2 selectors | fix: One hover signal per element
+WARN 11 style.css:209 hover scale(1.12) on 2 selectors | fix: One hover signal per element
+WARN 11 style.css:229 image transforms on hover (#geo-launch:hover img) | fix: Imagery sits still; give the container the feedback
+WARN 11 style.css:357 image transforms on hover (.gallery-photo:hover img) | fix: Imagery sits still; give the container the feedback
+WARN 11 style.css:429 image transforms on hover (.photo-view button:hover) | fix: Imagery sits still; give the container the feedback
+WARN 18 style.css:155 infinite animation on .hero-scroll span with no pause state | fix: Pause on hover and focus
+WARN 18 style.css:162 infinite animation on .sticker img with no pause state | fix: Pause on hover and focus
+WARN 18 style.css:440 infinite animation on .loader-stickers img with no pause state | fix: Pause on hover and focus
+WARN 29 style.css:409 glass panel: backdrop-filter blur over a translucent black on dialog::backdrop | fix: Solid or grained surface; elevation by lightness
+WARN 29 style.css:489 glass panel: backdrop-filter blur over a translucent white on .header::before | fix: Solid or grained surface; elevation by lightness
+WARN 40 style.css:43 1.00:1 < 4.5:1 on body | fix: Raise the contrast to threshold
+WARN 49 index.html:227 long clickable label "Build. Break. Learn. Repeat. ⛶" without nowrap | fix: Shorten the label or set nowrap
+WARN 49 index.html:227 long clickable label "A conversation in progress ⛶" without nowrap | fix: Shorten the label or set nowrap
+WARN 49 index.html:227 long clickable label "Taking the scenic route ⛶" without nowrap | fix: Shorten the label or set nowrap
+WARN 49 index.html:234 long clickable label "View 04 MAY 2024 Freedom with AI Ma…" without nowrap | fix: Shorten the label or set nowrap
+WARN 49 index.html:235 long clickable label "View 13 OCT 2023 YouTube Ads Master…" without nowrap | fix: Shorten the label or set nowrap
+WARN 49 index.html:236 long clickable label "View 31 MAR 2025 AI-Powered Perform…" without nowrap | fix: Shorten the label or set nowrap
+WARN 49 index.html:237 long clickable label "View 24 APR 2025 Letter of Recommen…" without nowrap | fix: Shorten the label or set nowrap
+WARN 58 index.html:1 1547 visible words on the page (450 at most) | fix: Cut copy: one idea per screen, sections become objects
+WARN 58 index.html:78 h1 runs 11 words ("HARSHA I build online stores and AI too…") | fix: Seven words or fewer, 50 characters or fewer
+WARN 59 index.html:1 [1440px] 12 sections | fix: Six to nine sections a page, hero and footer included; merge or cut
+WARN F3 style.css:47 no text-wrap: balance on any display head (8 head rule(s), e.g. h1,h2,h3,p,ul,figure) | fix: Add text-wrap: balance to h1/h2-level heads
+WARN F5 style.css:302 icon-in-coloured-circle coin: .expand-icon | fix: Drop the tinted coin; set the icon at text size in currentColor
+WARN F5 style.css:391 icon-in-coloured-circle coin: .social-icon | fix: Drop the tinted coin; set the icon at text size in currentColor
+WARN F6 style.css:268 numeric selector .stat strong at display size without tabular figures | fix: Add font-variant-numeric: tabular-nums
+WARN F6 style.css:269 numeric selector .stat span at display size without tabular figures | fix: Add font-variant-numeric: tabular-nums
+WARN F6 style.css:311 numeric selector .venture-number strong at display size without tabular figures | fix: Add font-variant-numeric: tabular-nums
+WARN F7 style.css:50 the pill radius on 7 non-control selectors (.skip, .about-photo figcaption, .skill-block, .…) | fix: Pills are for controls; boxes and media take the card radius
+WARN F15 style.css:1 5 different column gaps across multi-column sections (2em, clamp(30px,5vw,96px), clamp(30px,6vw,110px), clamp(12px,2vw,… | fix: One column gap for every multi-column section
+WARN F17 index.html:1 [1440px] "BUSINESS THINKING.
+HANDS-ON " squeezed to 616px wide over 4 lines (h2.display) | fix: A grid placement or a span ran wide; give the text its column back
+WARN F19 index.html:1 [1440px] 4 font weights in running use (400, 500, 600, 700) | fix: Three weights at most, display and body together, picked as extremes
+WARN F20 index.html:1 [1440px] div.tags leaves one item alone on its last row (3 + 1) | fix: Change the count or the columns so the last row is not an orphan
+WARN render index.html:1 the shots show a fallback: fonts or stylesheets did not load (anton-400.woff2, inter-tight-700.woff2) | fix: Recapture when the host answers or the path is right; never review or sign off a fallback face
